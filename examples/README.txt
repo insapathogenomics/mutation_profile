@@ -1,5 +1,5 @@
 # This folder contains the files necessary to reproduce the "Examples" section of the main repository. These files correspond to real examples 
-#used by the Bioinformatics Unit of INSA (Portugal) during Monkeypox 2022 outbreak and include:
+# used by the Bioinformatics Unit of INSA (Portugal) during Monkeypox 2022 outbreak and include:
 #
 # alignment_Figure1B.fasta - multiple sequence alignment
 # positions_of_interest.tsv - determined with ReporTree
