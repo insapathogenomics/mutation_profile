@@ -238,12 +238,32 @@ if __name__ == "__main__":
 									###############################################################################  
 									                            
 									This script was developed to rapidly obtain the sequence context flanking
-									SNPs of interest and determine their mutational profile/signature (e.g.
+									SNPs of interest and determine their 2bp-mutational profile/signature (e.g.
 									APOBEC3-mediated viral genome editing).
 									
 									This script can be run by providing different combinations of inputs
 									
 									OPTION1
+									
+									Input 1: TSV file with the columns POS REF ALT (i.e. 1-indexed reference position,
+									reference allele and alternative allele)
+									Input 2: Fasta file including the reference genome
+									
+									Output 1: TSV file with the mutation context and profile
+									
+									
+									OPTION 2
+									
+									Input 1: TSV file with the columns ID POS REF ALT (i.e. sample ID, 1-indexed 
+									reference position, reference allele and alternative allele)
+									Input 2: Fasta file including the reference genome
+									
+									Output 1: TSV file with the mutation context and profile for each sample present 
+									in the TSV input
+									Output 2: TSV file with a summary report for each mutation including the
+									different patterns observed and their respective frequency
+									
+									OPTION3
 									
 									Input 1: Single-column file with a list of 1-indexed reference positions of 
 									interest
@@ -255,27 +275,7 @@ if __name__ == "__main__":
 									different patterns observed and their respective frequency
 									
 									
-									OPTION2
-									
-									Input 1: TSV file with the columns POS REF ALT (i.e. 1-indexed reference position,
-									reference allele and alternative allele)
-									Input 2: Fasta file including the reference genome
-									
-									Output 1: TSV file with the mutation context and profile
-									
-									
-									OPTION 3
-									
-									Input 1: TSV file with the columns ID POS REF ALT (i.e. sample ID, 1-indexed 
-									reference position, reference allele and alternative allele)
-									Input 2: Fasta file including the reference genome
-									
-									Output 1: TSV file with the mutation context and profile for each sample present 
-									in the TSV input
-									Output 2: TSV file with a summary report for each mutation including the
-									different patterns observed and their respective frequency
-									
-									NOTE: IN OPTIONS 2 AND 3, THE ORDER OF THE COLUMNS IN THE INPUT 1 IS NOT
+									NOTE: IN OPTIONS 1 AND 32, THE ORDER OF THE COLUMNS IN THE INPUT 1 IS NOT
 									IMPORTANT, BUT THEIR NAME IS (ID, POS, REF, ALT)!!!
 									
 									-----------------------------------------------------------------------------"""))
@@ -289,7 +289,7 @@ if __name__ == "__main__":
 	group0.add_argument("-r", "--reference", dest="ref", type=str, required=True, help="[MANDATORY] Reference sequence name")
 	group0.add_argument("-b", "--before", dest="before", type=int, default=5, help="[OPTIONAL] Number of nucleotides to report BEFORE the mutation (default = 5)")
 	group0.add_argument("-a", "--after", dest="after", type=int, default=5, help="[OPTIONAL] Number of nucleotides to report AFTER the mutation (default = 5)")
-	group0.add_argument("-p", "--profiles", dest="profiles", type=str, default="GA>AA,TC>TT", help="[OPTIONAL] Comma-separated list of mutational profiles of interest (upper-case!). \
+	group0.add_argument("-p", "--profiles", dest="profiles", type=str, default="GA>AA,TC>TT", help="[OPTIONAL] Comma-separated list of 2bp-mutational profiles of interest (upper-case!). \
 						Default = 'GA>AA,TC>TT'")
 	group0.add_argument("-o", "--output", dest="output", type=str, default="Mutation_profile", help="[OPTIONAL] Tag for output file name. Default = Mutation_profile")
 
