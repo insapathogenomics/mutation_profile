@@ -37,13 +37,21 @@ _TIP: If you do not know your positions of interest, you can run the script _ali
 
 
 ## Dependencies and installation
-To run the _get_mutation_profile.py_ script you will need:
+To run the _get_mutation_profile.py_ you will need:
 - biopython
 - pandas
 
-If you want to create a conda environment, run:
+If you want to create a conda environment with these dependencies:
 ```bash
 conda create -n mutation_profile -c conda-forge -c anaconda biopython pandas
+```
+
+To install and run:
+```bash
+git clone https://github.com/insapathogenomics/mutation_profile.git
+cd mutation_profile/
+conda activate mutation_profile # if you created the conda environment
+python get_mutation_profile.py -h
 ```
 
 ## Usage
