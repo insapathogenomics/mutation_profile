@@ -36,6 +36,16 @@ _Outputs:_
 _TIP: If you do not know your positions of interest, you can run the script _alignment_processing.py_ of [ReporTree](https://github.com/insapathogenomics/ReporTree) and it will provide a list of positions of interest according to your specifications._
 
 
+## Dependencies and installation
+To run the _get_mutation_profile.py_ script you will need:
+- biopython
+- pandas
+
+If you want to create a conda environment, run:
+```bash
+conda create -n mutation_profile -c conda-forge -c anaconda biopython pandas
+```
+
 ## Usage
 
 ```bash
