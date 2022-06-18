@@ -9,7 +9,7 @@ By Veronica Mixao
 
 import os
 import sys
-from shutil import which
+#from shutil import which
 import argparse
 import textwrap
 from Bio import SeqIO, AlignIO
@@ -243,10 +243,10 @@ if __name__ == "__main__":
 									
 									This script can be run by providing different combinations of inputs
 									
-									OPTION1
+									OPTION 1
 									
-									Input 1: TSV file with the columns POS REF ALT (i.e. 1-indexed reference position,
-									reference allele and alternative allele)
+									Input 1: TSV file with the columns POS REF ALT (i.e. 1-indexed reference 
+									position, reference allele and alternative allele)
 									Input 2: Fasta file including the reference genome
 									
 									Output 1: TSV file with the mutation context and profile
@@ -263,7 +263,7 @@ if __name__ == "__main__":
 									Output 2: TSV file with a summary report for each mutation including the
 									different patterns observed and their respective frequency
 									
-									OPTION3
+									OPTION 3
 									
 									Input 1: Single-column file with a list of 1-indexed reference positions of 
 									interest
