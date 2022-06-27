@@ -150,4 +150,7 @@ python ReporTree/scripts/alignment_processing.py -align alignment_Figure1B.fasta
 
 ## Citation
 
-If you use this script please cite this github page.
+If you use this script please cite the article where it was first described:
+
+Isidro, J., Borges, V., Pinto, M. et al. Phylogenomic characterization and signs of microevolution in the 2022 multi-country outbreak of monkeypox virus.  
+Nature Medicine (2022). https://doi.org/10.1038/s41591-022-01907-y
