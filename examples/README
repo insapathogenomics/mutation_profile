@@ -1,5 +1,5 @@
 
-This folder contains the files necessary to reproduce the "Examples" section of the main repository. These files correspond to real examples used by the Bioinformatics Unit of INSA (Portugal) during Monkeypox 2022 outbreak and include:
+This folder contains the files necessary to reproduce the "Examples" section of the main repository. These files correspond to real examples used by the Bioinformatics Unit of INSA (Portugal) during Monkeypox 2022 outbreak in Isidro et al, 2022, Nat Med (https://doi.org/10.1038/s41591-022-01907-y) and include:
 - alignment_Figure1B.fasta - multiple sequence alignment
 - positions_of_interest_POS_REF_ALT.tsv - compiled positions of Supplementary Tables 3, 4 and 5
 - positions_of_interest_ID_POS_REF_ALT.tsv - positions of interest of Supplementary Table 4.
