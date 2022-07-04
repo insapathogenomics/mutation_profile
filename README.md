@@ -41,17 +41,17 @@ To run the _get_mutation_profile.py_ you will need:
 - biopython
 - pandas
 
-If you want to create a conda environment with these dependencies:
+### pip installation
 ```bash
-conda create -n mutation_profile -c conda-forge -c anaconda biopython pandas
+pip install mutation-profile
+mutation-profile -h
 ```
 
-To install and run:
+### conda installation
 ```bash
-git clone https://github.com/insapathogenomics/mutation_profile.git
-cd mutation_profile/
-conda activate mutation_profile # if you created the conda environment
-python get_mutation_profile.py -h
+conda create -n mutation-profile -c vmixao mutation-profile
+conda activate mutation-profile # if you created the conda environment
+mutation-profile -h
 ```
 
 ## Usage
@@ -153,4 +153,4 @@ python ReporTree/scripts/alignment_processing.py -align alignment_Figure1B.fasta
 If you use this script please cite the article where it was first described:
 
 Isidro, J., Borges, V., Pinto, M. et al. Phylogenomic characterization and signs of microevolution in the 2022 multi-country outbreak of monkeypox virus.  
-Nature Medicine (2022). https://doi.org/10.1038/s41591-022-01907-y
+_Nature Medicine_ (2022). https://doi.org/10.1038/s41591-022-01907-y
