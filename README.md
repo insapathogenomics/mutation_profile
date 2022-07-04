@@ -97,7 +97,7 @@ Mutation profile:
 Providing a TSV file with the columns POS REF ALT (i.e. 1-indexed reference position, reference allele and alternative allele) and a fasta file including the reference genome (can be the same alignment or a normal fasta sequence).
 
 ```bash
-python get_mutation_profile.py -f alignment_Figure1B.fasta -m positions_of_interest_POS_REF_ALT.txt -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION1
+mutation-profile -f alignment_Figure1B.fasta -m positions_of_interest_POS_REF_ALT.txt -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION1
 ```
 
 _Output:_    
@@ -110,7 +110,7 @@ _Output:_
 Providing a TSV file with the columns ID POS REF ALT (i.e. samples id, 1-indexed reference position, reference allele and alternative allele) and a fasta file including the reference genome (can be the same alignment or a normal fasta sequence).
 
 ```bash
-python get_mutation_profile.py -f alignment_Figure1B.fasta -m positions_of_interest_ID_POS_REF_ALT.txt -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION2
+mutation-profile -f alignment_Figure1B.fasta -m positions_of_interest_ID_POS_REF_ALT.txt -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION2
 ```
 
 _Outputs:_    
@@ -128,7 +128,7 @@ _Outputs:_
 Providing a single-column file with a list of 1-indexed reference positions of interest and a fasta Multiple Sequence Alignment including the reference genome.
 
 ```bash
-python get_mutation_profile.py -f alignment_Figure1B.fasta -m Monkeypox_positions_of_interest.tsv -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION3
+mutation-profile -f alignment_Figure1B.fasta -m Monkeypox_positions_of_interest.tsv -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION3
 ```
 
 _Outputs:_     
