@@ -12,6 +12,7 @@ import pandas
 
 from mutation_profile.mutation_profile import get_ref_coords, mut_profile, summary
 
+version = "0.2.1"
 
 def main():
     
@@ -68,17 +69,26 @@ def main():
 									-----------------------------------------------------------------------------"""))
 	
 	group0 = parser.add_argument_group("Mutation profile", "Provide input/output specifications")
-	group0.add_argument("-f", "--fasta", dest="fasta", required=True, type=str, help="[MANDATORY] Input sequence file (fasta)")
-	group0.add_argument("-m", "--mutation_list", dest="mutation", required=True, type=str, help="[MANDATORY] Input mutation list that can be: 1) single-column file with 1-based reference position\
+	group0.add_argument("-f", "--fasta", dest="fasta", required=False, type=str, help="[MANDATORY] Input sequence file (fasta)")
+	group0.add_argument("-m", "--mutation_list", dest="mutation", required=False, type=str, help="[MANDATORY] Input mutation list that can be: 1) single-column file with 1-based reference position\
 						information (in this case the fasta file must be a multiple sequence alignment of all the sequences of interest); OR 2) tsv file with the columns POS, REF, and ALT \
 						where POS = 1-based reference position. If you want to include information for more than one sample per position, add also the column 'ID' (note that the order of the \
 						columns is not important but their name is!)")
-	group0.add_argument("-r", "--reference", dest="ref", type=str, required=True, help="[MANDATORY] Reference sequence name")
+	group0.add_argument("-r", "--reference", dest="ref", type=str, required=False, help="[MANDATORY] Reference sequence name")
 	group0.add_argument("-b", "--before", dest="before", type=int, default=5, help="[OPTIONAL] Number of nucleotides to report BEFORE the mutation (default = 5)")
 	group0.add_argument("-a", "--after", dest="after", type=int, default=5, help="[OPTIONAL] Number of nucleotides to report AFTER the mutation (default = 5)")
 	group0.add_argument("-p", "--profiles", dest="profiles", type=str, default="GA>AA,TC>TT", help="[OPTIONAL] Comma-separated list of 2bp-mutational profiles of interest (upper-case!). \
 						Default = 'GA>AA,TC>TT'")
 	group0.add_argument("-o", "--output", dest="output", type=str, default="Mutation_profile", help="[OPTIONAL] Tag for output file name. Default = Mutation_profile")
+	group0.add_argument("-v", "--version", dest="version", action="store_true", help="Print version and exit")
+
+	args = parser.parse_args()
+	
+	# check if version	----------
+	
+	if args.version:
+		print("version:", version)
+		sys.exit()
 
 	args = parser.parse_args()
 	
