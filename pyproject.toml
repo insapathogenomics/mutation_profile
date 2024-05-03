@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mutation-profile"
-version = "0.1.0"
+version = "0.2.1"
 description = "A bioinformatics solution to determine SNP flanking sequences and mutation profile"
 authors = ["Veronica Mixao <vmixao@gmail.com>"]
 license = "GPL-3.0-only"
@@ -11,9 +11,10 @@ repository = "https://github.com/insapathogenomics/mutation_profile"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-biopython = "^1.70"
+biopython = "^1.80"
 pandas = "^1.4.3"
 textwrap3 = "^0.9.2"
+requests = "^2.31.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
