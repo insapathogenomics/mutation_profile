@@ -49,7 +49,7 @@ mutation-profile -h
 
 ### conda installation
 ```bash
-conda create -n mutation-profile -c vmixao mutation-profile
+conda create -n mutation-profile vmixao::mutation-profile
 conda activate mutation-profile # if you created the conda environment
 mutation-profile -h
 ```
@@ -89,6 +89,7 @@ Mutation profile:
   -o OUTPUT, --output OUTPUT
                         [OPTIONAL] Tag for output file name. Default =
                         Mutation_profile
+  -v, --version         Print version and exit	
 ```
 
 ## Examples using Monkeypox 2022 outbreak data available at [_examples/_](https://github.com/insapathogenomics/mutation_profile/tree/main/examples)
@@ -97,7 +98,7 @@ Mutation profile:
 Providing a TSV file with the columns POS REF ALT (i.e. 1-indexed reference position, reference allele and alternative allele) and a fasta file including the reference genome (can be the same alignment or a normal fasta sequence).
 
 ```bash
-mutation-profile -f alignment_Figure1B.fasta -m positions_of_interest_POS_REF_ALT.txt -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION1
+mutation-profile -f alignment_Figure1B.fasta -m positions_of_interest_POS_REF_ALT.tsv -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION1
 ```
 
 _Output:_    
@@ -110,7 +111,7 @@ _Output:_
 Providing a TSV file with the columns ID POS REF ALT (i.e. samples id, 1-indexed reference position, reference allele and alternative allele) and a fasta file including the reference genome (can be the same alignment or a normal fasta sequence).
 
 ```bash
-mutation-profile -f alignment_Figure1B.fasta -m positions_of_interest_ID_POS_REF_ALT.txt -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION2
+mutation-profile -f alignment_Figure1B.fasta -m positions_of_interest_ID_POS_REF_ALT.tsv -r 'MT903344.1_Monkeypox_virus_isolate_MPXVUK_P2_complete_genome' -b 10 -a 10 -o OPTION2
 ```
 
 _Outputs:_    
